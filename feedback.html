@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symposium Feedback</title>
+  </head>
+  <body>
+   
+    <h1>Did you enjoy our symposium? Please record your feedback!</h1>
+
+    
+    <form action="#">
+      
+      <label for="eventfb"><b>Please enter the event name :</b></label>
+      <input type="text" name="eventfb" id="eventfb" required size="60" />
+      <br /><br />
+
+      <label for="rating"><b>Symposium Rating:</b> </label>
+     
+      <input type="radio" name="1rt" id="rating" value="1" required /> 1 <input type="radio" name="1rt" value="2" /> 2
+      <input type="radio" name="1rt" value="3" /> 3 <input type="radio" name="1rt" value="4" /> 4 <input type="radio" name="1rt" value="5" /> 5
+
+      <br /><br />
+      <label for="cncrtfbtext"><b>Provide feedback: </b></label> <br />
+
+      <!-- textarea -->
+      <textarea
+        name="eventfbtext"
+        id="eventfbtext"
+        cols="64"
+        rows="8"
+        placeholder="Enter feedback about the symposium event"
+        minlength="10"
+        required
+      ></textarea>
+
+      <br /><br />
+
+      
+      <button type="submit">Submit the feedback</button>
+    </form>
+
+    
+    <script>
+      document.querySelector("form").onsubmit = function concerteventfeedback(e) {
+        e.preventDefault();
+        
+        alert("Your feedback has been recorded!");
+      };
+    </script>
+  </body>
+</html>
